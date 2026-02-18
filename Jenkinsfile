@@ -11,7 +11,7 @@ pipeline
           branch 'main'
       }
     }
-    stages('Run script')
+    stage('Run script')
     {
       steps
       {
