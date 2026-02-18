@@ -1,0 +1,22 @@
+pipeline
+{
+  agent any
+  stages
+  {
+    stage('clone')
+    {
+      steps 
+      {
+        git url: 'https://github.com/rakshithasrramu-boop/jenkins_demo.git',
+          branch 'main'
+      }
+    }
+    stages('Run script')
+    {
+      steps
+      {
+        sh 'chmod +x script.hs'
+      }
+    }
+  }
+}
